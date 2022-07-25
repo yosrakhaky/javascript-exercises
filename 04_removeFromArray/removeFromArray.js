@@ -5,9 +5,10 @@ const removeFromArray = function() {
     console.log(args);
     var removeArray = [];
     var finalArray = [];
-    for (i=1; i<arguments.length; i++) {
-        indexToRemove = initArray.indexOf(arguments[i+1]); // find index of value inside argument to be removed from array
-        removeArray.push(indexToRemove); //collect indices of values to be removed into one array
+    
+    for (i=0; i<(arguments.length-1); i++) {
+        index = initArray.indexOf(args[i+1]); // find index of value inside argument to be removed from array
+        removeArray.push(index); //collect indices of values to be removed into one array
      }
     console.log(removeArray);
 
