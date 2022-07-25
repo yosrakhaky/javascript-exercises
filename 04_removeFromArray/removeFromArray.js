@@ -3,22 +3,16 @@ const removeFromArray = function() {
     var initArray = args[0];
     console.log(initArray);
     console.log(args);
-    var removeArray = [];
     var finalArray = [];
     
-    for (i=0; i<(arguments.length-1); i++) {
-        index = initArray.indexOf(args[i+1]); // find index of value inside argument to be removed from array
-        removeArray.push(index); //collect indices of values to be removed into one array
-     }
-    console.log(removeArray);
+    initArray.forEach((item) => {
+        if (!args.includes(item)) {
+            finalArray.push(item);
+            console.log(finalArray);
+        }
+    });
 
-    for (i=0; i<removeArray.length; i++) {
-        finalArray = initArray.splice(removeArray[i]);
-    }
-    
-
-    console.log(finalArray);
-    console.log(initArray);
+    return finalArray;
 
 };
 
