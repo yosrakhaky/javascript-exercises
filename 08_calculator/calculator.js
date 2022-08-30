@@ -34,8 +34,19 @@ const power = function(num1, num2) {
   return pow;
 };
 
-const factorial = function() {
-	
+const factorial = function(num) {
+  var fact = num
+  if (num == 0) {
+    return 1
+  }
+  else {
+    for (var i=num; i>1; i--) {
+      fact = fact * (i-1)
+      console.log(i)
+    }
+    console.log(fact)
+    return fact;
+}
 };
 
 // Do not edit below this line
