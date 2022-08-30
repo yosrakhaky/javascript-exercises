@@ -26,8 +26,12 @@ const multiply = function(arr) {
   return product;
 };
 
-const power = function() {
-	
+const power = function(num1, num2) {
+	var pow = 1;
+  for (var i=0; i<num2; i++) {
+    pow = pow*num1
+  }
+  return pow;
 };
 
 const factorial = function() {
